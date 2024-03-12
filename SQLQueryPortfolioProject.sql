@@ -111,7 +111,7 @@ JOIN PortfolioProject..CovidVaccinations vac
 	ON dea.location = vac.location
 	AND dea.date = vac.date
 
-SELECT *, ROUND(RollingPeopleVaccinated/Population*100, 3) AS VaccinatedPeoplePercentage 
+SELECT *, ROUND(RollingPeopleVaccinated/Population*100, 2) AS VaccinatedPeoplePercentage 
 FROM #PercentPopulationVaccinated
 ORDER BY Location
 
