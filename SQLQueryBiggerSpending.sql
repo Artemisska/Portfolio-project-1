@@ -81,6 +81,7 @@ FROM products
 select *
 FROM order_items
 
+--Use of Multiple JOINs
 
 SELECT ord.id AS ord_id, customer_id, order_id, product_id, quantity, prd.id AS prd_id, price, SUM(quantity * price) OVER (PARTITION BY customer_id) AS sum_price_per_product
 FROM order_items ord_itm
